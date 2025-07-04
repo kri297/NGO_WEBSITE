@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Fresh Tray - Healthy food van serving nutritious meals in your neighborhood">
+    <meta name="keywords" content="healthy food, food truck, nutritious meals, salads, wraps">
+    <title>Fresh Tray - Healthy Food Van</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+ </head>
+ <body>
+    <div id="progressBar"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+      <i class="fas fa-utensils"></i>
+     <span>Fresh Tray</span>
+        </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+     </nav>
+
+     <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Fresh Tray</h1>
+            <p>Serving delicious, healthy food on wheels</p>
+            <button class="cta-btn" onclick="scrollToSection('menu')">
+                <i class="fas fa-utensils" aria-hidden="true"></i>
+                View Menu
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="food-van">
+                <i class="fas fa-truck-moving" aria-hidden="true"></i>
+            </div>
+        </div>
+     </section>
+
+     <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="salads">Salads</button>
+                <button class="filter-btn" data-filter="wraps">Wraps</button>
+                <button class="filter-btn" data-filter="bowls">Bowls</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+            <div class="menu-grid" id="menuGrid">
+                <div class="menu-item" data-category="salads">
+                    <img src="photo.jpg" alt="Sprout Chaat" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Sprouts Chaat</h3>
+                        <p>Fresh mixed sprouts with onions, tomatoes, and tangy chutneys</p>
+                        <span class="price">₹120</span>
+                        <button class="add-to-cart" onclick="addToCart('Sprouts Chaat', 120)" aria-label="Add Sprouts Chaat to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="wraps">
+            <img src="photo1.jpeg" alt="Paneer Tikka Roll" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Paneer Tikka Roll</h3>
+                        <p>Grilled paneer tikka wrapped with fresh vegetables and mint chutney</p>
+                        <span class="price">₹150</span>
+                        <button class="add-to-cart" onclick="addToCart('Paneer Tikka Roll', 150)" aria-label="Add Paneer Tikka Roll to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bowls">
+                    <img src="photo2.jpeg" alt="Quinoa Upma Bowl" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Quinoa Upma Bowl</h3>
+                        <p>Nutritious quinoa upma with mixed vegetables and curry leaves</p>
+                        <span class="price">₹140</span>
+                        <button class="add-to-cart" onclick="addToCart('Quinoa Upma Bowl', 140)" aria-label="Add Quinoa Upma Bowl to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                 <img src="photo3.jpeg" alt="Kachumber Salad" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Kachumber Salad</h3>
+                        <p>Fresh cucumber, tomato, onion salad with lemon and black salt</p>
+                        <span class="price">₹80</span>
+                        <button class="add-to-cart" onclick="addToCart('Kachumber Salad', 80)" aria-label="Add Kachumber Salad to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="wraps">
+                    <img src="photo4.jpeg" alt="Veggie Paratha Roll" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Veggie Paratha Roll</h3>
+                        <p>Stuffed vegetable paratha rolled with fresh chutneys and pickles</p>
+                        <span class="price">₹110</span>
+                        <button class="add-to-cart" onclick="addToCart('Veggie Paratha Roll', 110)" aria-label="Add Veggie Paratha Roll to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bowls">
+                <img src="photo5.jpeg" alt="Rajma Rice Bowl" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Rajma Rice Bowl</h3>
+                        <p>Protein-rich rajma curry served with brown rice and salad</p>
+                        <span class="price">₹160</span>
+                        <button class="add-to-cart" onclick="addToCart('Rajma Rice Bowl', 160)" aria-label="Add Rajma Rice Bowl to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="photo6.jpeg" alt="Mint Lassi" loading="lazy" />
+                    <div class="menu-content">
+                        <h3>Mint Lassi</h3>
+                        <p>Fresh yogurt-based drink with mint, cumin, and black salt</p>
+                        <span class="price">₹70</span>
+                        <button class="add-to-cart" onclick="addToCart('Mint Lassi', 70)" aria-label="Add Mint Lassi to cart">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Know Your Nutrition Banner -->
+ <div class="nutrition-banner">
+    <div class="sparkle">✨</div>
+    <div class="sparkle">⭐</div>
+    <div class="sparkle">💫</div>
+
+    <h2>🍱 Know Your Nutrition</h2>
+    <p>Curious about what's on your plate? Use our Meal Builder to see the nutritional values of your custom dish!</p>
+    <a href="meal-builder.html" class="glow-button">Start Meal Builder</a>
+ </div>
+
+
+     <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-leaf" aria-hidden="true"></i>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Locally sourced, organic ingredients for maximum nutrition</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <h3>Quick Service</h3>
+                    <p>Fast preparation without compromising on quality</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <h3>Healthy Options</h3>
+                    <p>Nutritious meals that fuel your body and mind</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <h3>Order Ahead</h3>
+                    <p>Skip the line with our online ordering system</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Fresh Tray</h2>
+                    <p>We're passionate about bringing fresh, healthy food directly to you. Our mobile food van travels throughout the city, serving nutritious meals made with the finest local ingredients.</p>
+                    <p>Founded in 2025, Fresh Tray was born from the idea that healthy eating shouldn't be complicated or time-consuming. We believe everyone deserves access to delicious, wholesome food, wherever they are.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Healthy Recipes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="chef-illustration">
+                        <i class="fas fa-utensils" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+      <section id="location" class="location">
+        <div class="container">
+            <h2>Find Us Today</h2>
+            <div class="location-content">
+                <div class="schedule">
+                    <h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Weekly Schedule</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="day">Monday</span>
+                            <span class="time">10:00 AM - 6:00 PM</span>
+                            <span class="place">Sanjay Palace</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Tuesday</span>
+                            <span class="time">10:00 AM - 6:00 PM</span>
+                            <span class="place">Civil Lines</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Wednesday</span>
+                            <span class="time">10:00 AM - 6:00 PM</span>
+                            <span class="place">Kamla Nagar</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Thursday</span>
+                            <span class="time">10:00 AM - 6:00 PM</span>
+                            <span class="place">Madhu Nagar</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Friday</span>
+                            <span class="time">10:00 AM - 6:00 PM</span>
+                            <span class="place">I Love Agra</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">10:00 AM - 6:00 PM</span>
+                            <span class="place">Sadar Bazar</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">10:00 AM - 4:00 PM</span>
+                            <span class="place">Shahganj</span>
+                        </div>
+                    </div>
+                </div>
+               <div class="live-location">
+    <h3><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Live Location</h3>
+    <div class="current-location">
+        <button class="track-btn" onclick="trackLocation()">
+            <i class="fas fa-location-arrow" aria-hidden="true"></i>
+             Track Our Van <small>(Click here)</small>
+        </button>
+    </div>
+</div>
+
+<script>
+function trackLocation() {
+    window.location.href = "location.html";
+}
+</script>
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 6397124871</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>krishmishra121301@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 10AM-6PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
+                    <textarea name="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+     </section>
+
+     <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="close-cart" onclick="toggleCart()" aria-label="Close cart">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fas fa-credit-card" aria-hidden="true"></i>
+                Checkout
+            </button>
+        </div>
+     </div>
+
+     <div class="cart-toggle" onclick="toggleCart()" aria-label="Shopping cart">
+        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+        <span class="cart-count" id="cartCount">0</span>
+     </div>
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fresh Tray</h3>
+                    <p>Bringing healthy, delicious food to your neighborhood, one stop at a time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#location">Location</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +91 6397124871</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> krishmishra121301@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fresh Tray. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="chefChatbot.js" defer></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('progressBar').style.width = scrollPercent + "%";
+  });
+  
+</script>
+
+</body>
+</html>
