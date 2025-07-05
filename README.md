@@ -24,7 +24,7 @@ Visit: [https://freshtray-mges.vercel.app/](https://freshtray-mges.vercel.app/)
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/[your-username]/fresh-tray.git
+   git clone https://github.com/kri297/fresh-tray.git
    cd fresh-tray
    ```
 
